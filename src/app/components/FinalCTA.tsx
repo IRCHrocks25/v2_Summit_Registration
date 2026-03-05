@@ -218,6 +218,9 @@ export function FinalCTA() {
           style={{
             fontSize: "1rem",
           }}
+          onClick={() => {
+            document.getElementById('registration-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }}
         >
           REGISTER FREE NOW!
         </button>

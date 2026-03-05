@@ -182,6 +182,9 @@ export function InfoSection2() {
               boxShadow: "0 8px 30px rgba(201,149,42,0.35)",
               letterSpacing: "0.03em",
             }}
+            onClick={() => {
+              document.getElementById('registration-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }}
           >
             CLAIM MY FREE SEAT NOW <ArrowRight size={18} />
           </button>

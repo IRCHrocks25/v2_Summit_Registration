@@ -264,6 +264,9 @@ export function WhatYouLearn() {
               fontSize: "0.95rem",
               whiteSpace: "nowrap",
             }}
+            onClick={() => {
+              document.getElementById('registration-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }}
           >
             REGISTER FREE NOW →
           </button>

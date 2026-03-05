@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import { CheckCircle, Gift } from "lucide-react";
+import React, { useState, useEffect } from "react";
 import Cred from "../../imports/Cred";
 
 function CountdownTimer() {
@@ -67,9 +66,6 @@ function CountdownTimer() {
 }
 
 export function HeroSection() {
-  const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
-
   return (
     <section
       className="relative overflow-hidden"
@@ -233,18 +229,19 @@ export function HeroSection() {
           </div>
 
           {/* Registration form */}
-          <div className="order-1 md:order-2">
+          <div className="order-1 md:order-2" id="registration-form">
             <div
-              className="rounded-2xl p-7 md:p-8"
+              className="rounded-2xl"
               style={{
                 background: "rgba(255,255,255,0.04)",
                 border: "1.5px solid rgba(255,255,255,0.1)",
                 backdropFilter: "blur(12px)",
+                padding: "1.4rem 1.5rem",
               }}
             >
               {/* Save the date */}
               <div
-                className="flex items-center gap-2 mb-5 pb-5"
+                className="flex items-center gap-2 mb-4 pb-4"
                 style={{ borderBottom: "1px solid rgba(255,255,255,0.08)" }}
               >
                 <div
@@ -293,12 +290,13 @@ export function HeroSection() {
 
               {/* Credibility */}
               <p
-                className="mb-5"
+                className="mb-4"
                 style={{
                   fontSize: "0.85rem",
                   color: "rgba(255,255,255,0.65)",
                   lineHeight: 1.75,
                   paddingTop: "16px",
+                  paddingBottom: "8px",
                   borderTop: "1px solid rgba(255,255,255,0.08)",
                 }}
               >
@@ -313,44 +311,41 @@ export function HeroSection() {
                 </strong>
               </p>
 
-              {/* Form */}
-              <div className="flex flex-col gap-3">
-                <input
-                  type="text"
-                  placeholder="Your First Name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  className="w-full px-4 py-3.5 rounded-xl outline-none transition-all"
+              {/* Form iframe */}
+              <div 
+                className="w-full"
+                style={{
+                  minHeight: "350px",
+                  borderRadius: "3px",
+                  overflow: "hidden",
+                  background: "transparent",
+                  padding: "0",
+                }}
+              >
+                <iframe
+                  src="https://l.industryrockstars.ch/widget/form/JrFmayOmUwTx6OEASpaM"
                   style={{
-                    background: "rgba(255,255,255,0.08)",
-                    border: "1px solid rgba(255,255,255,0.15)",
-                    color: "white",
-                    fontSize: "0.95rem",
-                    fontFamily: "'DM Sans', sans-serif",
+                    width: "100%",
+                    height: "100%",
+                    minHeight: "350px",
+                    border: "none",
+                    borderRadius: "3px",
+                    background: "transparent",
                   }}
+                  id="inline-JrFmayOmUwTx6OEASpaM"
+                  data-layout="{'id':'INLINE'}"
+                  data-trigger-type="alwaysShow"
+                  data-trigger-value=""
+                  data-activation-type="alwaysActivated"
+                  data-activation-value=""
+                  data-deactivation-type="neverDeactivate"
+                  data-deactivation-value=""
+                  data-form-name="FB - AI Assisted Global Summit - NEED FINAL DATE"
+                  data-height="293"
+                  data-layout-iframe-id="inline-JrFmayOmUwTx6OEASpaM"
+                  data-form-id="JrFmayOmUwTx6OEASpaM"
+                  title="FB - AI Assisted Global Summit - NEED FINAL DATE"
                 />
-                <input
-                  type="email"
-                  placeholder="Your Best Email Address"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-4 py-3.5 rounded-xl outline-none"
-                  style={{
-                    background: "rgba(255,255,255,0.08)",
-                    border: "1px solid rgba(255,255,255,0.15)",
-                    color: "white",
-                    fontSize: "0.95rem",
-                    fontFamily: "'DM Sans', sans-serif",
-                  }}
-                />
-                <button
-                  className="cta-btn w-full py-4"
-                  style={{
-                    fontSize: "1rem",
-                  }}
-                >
-                  REGISTER FREE NOW! →
-                </button>
               </div>
             </div>
           </div>

@@ -144,6 +144,9 @@ export function FreeGiftSection() {
                   fontSize: "1rem",
                   whiteSpace: "nowrap",
                 }}
+                onClick={() => {
+                  document.getElementById('registration-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }}
               >
                 REGISTER FREE NOW! →
               </button>

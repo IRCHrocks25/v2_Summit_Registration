@@ -245,6 +245,9 @@ export function TwoChoices() {
             style={{
               fontSize: "0.92rem",
             }}
+            onClick={() => {
+              document.getElementById('registration-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }}
           >
             REGISTER FREE NOW →
           </button>
